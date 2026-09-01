@@ -104,7 +104,3 @@ Select your board under `Tools → Board`, select the correct port, and hit uplo
 - Add solar charging ahead of the LiPo boost module for multi-day off-grid use
 
 ---
-
-## License
-
-*(Add your chosen license here — e.g. MIT, GPLv3.)*
