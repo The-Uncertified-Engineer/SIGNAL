@@ -1,5 +1,12 @@
 /*
  * ==========================================================================
+ *   ____    ___    ____   _   _      _      _     
+ *  / ___|  |_ _|  / ___| | \ | |    / \    | |    
+ *  \___ \   | |  | |  _  |  \| |   / _ \   | |    
+ *   ___) |  | |  | |_| | | |\  |  / ___ \  | |___ 
+ *  |____/  |___|  \____| |_| \_| /_/   \_\ |_____|
+ 
+ * ==========================================================================
  *  SIGNAL — Off-Grid Emergency Signaling Device
  *  Platform: ESP32 Dev Module
  *  Display : 0.96" SSD1306 I2C OLED (128x64, addr 0x3C, SDA21/SCL22)
@@ -36,7 +43,7 @@
 #define SCREEN_HEIGHT   64
 
 // ---- Morse timing -----------------------------------------------------
-#define MORSE_UNIT_MS   180UL
+#define MORSE_UNIT_MS   1000
 #define TONE_FREQ_HZ    2400
 
 // ---- Button timing ------------------------------------------------------
@@ -465,7 +472,7 @@ void renderSplash() {
   u8g2.drawStr(centerTextX("SIGNAL"), 30, "SIGNAL");
 
   u8g2.setFont(u8g2_font_6x10_tr);
-  const char* sub = "OFF-GRID EMERGENCY BEACON";
+  const char* sub = "EMERGENCY BEACON";
   u8g2.drawStr(centerTextX(sub), 44, sub);
 
   drawDivider(54);
